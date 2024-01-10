@@ -1,7 +1,7 @@
 account_id: '691110871740'
 deploy_target_bucket: cmtr-c04fb6ad-ttt-test
 extended_prefix_mode: false
-project_path: C:\Users\habat\epam-aws\task01
+project_path: C:\Users\habat\epam-aws\task02
 region: eu-central-1
 resources_prefix: syn-
 resources_suffix: -dev
