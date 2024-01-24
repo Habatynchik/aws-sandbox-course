@@ -3,9 +3,9 @@ package com.task05;
 import java.util.Map;
 
 public class EventResponse {
-    String  id;
-    int principalId;
-    String createdAt;
+    private String  id;
+    private int principalId;
+    private String createdAt;
     private Map<String, String> body;
 
     public EventResponse() {
