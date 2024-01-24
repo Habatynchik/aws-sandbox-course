@@ -39,13 +39,13 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
             EventRequest eventRequest = objectMapper.readValue(apiGatewayProxyRequestEvent.getBody(), EventRequest.class);
 
             String id = UUID.randomUUID().toString();
-            String createAt = Instant.now().toString();
+            String createdAt = Instant.now().toString();
 
             Item item = new Item()
                     .withPrimaryKey("id", id)
                     .withNumber("principalId", eventRequest.getPrincipalId())
                     .withMap("body", eventRequest.getContent())
-                    .withString("createAt", createAt);
+                    .withString("createdAt", createdAt);
 
             PutItemOutcome response = table.putItem(item);
 
