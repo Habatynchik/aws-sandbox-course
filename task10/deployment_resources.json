@@ -133,7 +133,7 @@
         "enable_cors": true,
         "GET": {
           "integration_request_body_template": {},
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "method_request_parameters": {},
           "default_error_pattern": true,
@@ -143,7 +143,7 @@
         },
         "POST": {
           "integration_request_body_template": {},
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "method_request_parameters": {},
           "default_error_pattern": true,
@@ -156,7 +156,7 @@
         "enable_cors": true,
         "GET": {
           "integration_request_body_template": {},
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "method_request_parameters": {},
           "default_error_pattern": true,
@@ -169,7 +169,7 @@
         "enable_cors": true,
         "GET": {
           "integration_request_body_template": {},
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "method_request_parameters": {},
           "default_error_pattern": true,
@@ -179,7 +179,7 @@
         },
         "POST": {
           "integration_request_body_template": {},
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "method_request_parameters": {},
           "default_error_pattern": true,
