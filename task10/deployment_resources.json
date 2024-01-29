@@ -121,7 +121,6 @@
         }
       },
       "/tables": {
-        "enable_cors": true,
         "GET": {
           "integration_request_body_template": {},
           "authorization_type": "NONE",
