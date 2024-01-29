@@ -29,7 +29,7 @@ import java.util.Map;
 public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
     private static final int STATUS_CODE_OK = 200;
     private static final int STATUS_CODE_ERROR = 400;
-    private static final int STATUS_CODE_PAGE_NOT_FOUND = 400;
+    private static final int STATUS_CODE_PAGE_NOT_FOUND = 404;
 
     private static final String GET_METHOD = "GET";
     private static final String POST_METHOD = "POST";
