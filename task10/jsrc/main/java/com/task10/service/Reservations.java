@@ -24,6 +24,14 @@ public class Reservations {
     private String slotTimeStart;
     private String slotTimeEnd;
 
+    @DynamoDBHashKey(attributeName = "id")
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public boolean equalsWithoutId(Object o) {
         if (this == o) return true;

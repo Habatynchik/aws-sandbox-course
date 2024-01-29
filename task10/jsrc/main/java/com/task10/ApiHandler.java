@@ -49,6 +49,8 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
     @Override
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent input, Context context) {
 
+        context.getLogger().log(input.getBody());
+
         if (input.getPath().startsWith("/signup")) {
             return handleSignOutRequest(input, context);
         } else if (input.getPath().startsWith("/signin")) {
@@ -141,6 +143,8 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
     }
 
     private APIGatewayProxyResponseEvent createTables(APIGatewayProxyRequestEvent event) {
+
+
         PostTablesRequest request = gson.fromJson(event.getBody(), PostTablesRequest.class);
         PostTablesResponse response = dynamoDbService.createTables(request);
 

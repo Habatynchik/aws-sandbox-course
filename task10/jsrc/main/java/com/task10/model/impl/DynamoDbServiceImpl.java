@@ -25,7 +25,7 @@ public class DynamoDbServiceImpl implements DynamoDbService {
 
     public DynamoDbServiceImpl(AmazonDynamoDB amazonDynamoDB) {
         this.amazonDynamoDB = amazonDynamoDB;
-        dynamoDB = new DynamoDB(amazonDynamoDB);
+        dynamoDB = new DynamoDB(this.amazonDynamoDB);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class DynamoDbServiceImpl implements DynamoDbService {
                     .isVip(item.getNumber("isVip").equals(BigDecimal.ONE))
                     .minOrder(item.getInt("minOrder"))
                     .build();
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new TableNotFoundException();
         }
 
