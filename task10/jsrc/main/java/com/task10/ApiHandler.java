@@ -15,6 +15,7 @@ import com.task10.exception.TableNotFoundException;
 import com.task10.model.DynamoDbService;
 import com.task10.model.impl.DynamoDbServiceImpl;
 import com.task10.service.Tables;
+import software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.cognitoidentityprovider.CognitoIdentityProviderClient;
 import software.amazon.awssdk.services.cognitoidentityprovider.model.*;
@@ -221,6 +222,7 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
     private void initCognitoIdentityProviderClient() {
         cognitoClient = CognitoIdentityProviderClient.builder()
                 .region(Region.EU_CENTRAL_1)
+                .credentialsProvider(EnvironmentVariableCredentialsProvider.create())
                 .build();
     }
 
